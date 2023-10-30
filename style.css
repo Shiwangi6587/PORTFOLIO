@@ -274,12 +274,12 @@ box-sizing: 12rem;
 .skill_image img {
   mix-blend-mode: darken;
   display: flex;
-  width: 100px; /* Set your desired width */
-  height: auto; /* This maintains the aspect ratio */
-  margin: 10px; /* Adjust the margin to control the spacing between images */
-  position: relative; /* Initial position */
-  right: -100px; /* Initial position to the right */
-  transition: right 0.5s ease-in-out; /* Animation transition */
+  width: 100px; 
+  height: auto; 
+  margin: 10px; 
+  position: relative; 
+  right: -100px; 
+  transition: right 0.5s ease-in-out; 
 }
 
 
@@ -406,20 +406,20 @@ color: blue;
 }
 
 
-/* Initial state of the contact box */
+
 .contact_form {
   transform: scale(1);
   opacity: 1;
   transition: transform 1s, opacity 1s;
 }
 
-/* When the contact section is visible, apply the animation */
+
 .contact_form.small {
-  transform: scale(0.5); /* You can adjust the scale value as needed */
+  transform: scale(0.5); 
   opacity: 0;
   transition: transform 2s, opacity 2s;
 }
-/* When hovering over the contact section, make the contact form visible */
+
 #contact:hover .contact_form.small {
   transform: scale(1);
   opacity: 1;
@@ -591,12 +591,6 @@ color: blue;
     opacity: 0;
   }
 }
-
-/* contact  */
-
-/* Add these styles in your CSS file */
-/* Add these styles in your CSS file */
-/* Add these styles in your CSS file */
 
 
 
@@ -835,5 +829,5 @@ p {
 
   }
   
-  /* Add more CSS styles as needed */
+  
   
