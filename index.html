@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- nn -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
   
 
      <!-- header code  -->
-    
+   <!-- head   -->
     <header>
         <nav>
             <div class="left"> PORTFOLIO</div>
@@ -41,7 +41,7 @@
 <!-- ................................. HOME................................  -->
     <!-- first section  -->
     
-    <section id="home" class="first">
+   <section id="home" class="first">
         <div class="left_section">
  HY... my name is  <span class="pink">shiwangi </span>,I'M a  <br>   
        
@@ -56,7 +56,7 @@
  <img src="image_1.png" alt="default">
         </div>
 
-    </section>
+    </section> 
    
    
  <!-- ................................. ABOUT ................................  -->
@@ -75,9 +75,11 @@
     </section>
  
 
-<br><br><br>
+<br><br><br> 
+
 
 <!-- ................................. SKILL ................................  -->
+
 
 
 <section class="skill-section" id="Border">
@@ -124,35 +126,28 @@
   </div>
   </section>
 
-
-
-
     <!-- forth section -->
- 
-
-
-
 
 
     <section class="project-section" id="project">
       <div class="texten"> <h1>PROJECT</h1></div>
       <div class="twinkling-thread"></div>
       <div class="project-cards">
-        <!-- 1ST  -->
+       
         <div class="project-card">
           <img src="solarsystem.webp" alt="Project 1">
           <h3>Project 1</h3>
           <p>Solar-System metaverse project</p>
           <a href="https://shiwangi6587.github.io/SOLAR-SYSTEM/">View Project</a>
           </div>
-          <!-- 2ND  -->
+          
         <div class="project-card">
           <img src="time travel.jpeg" alt="Project 1">
           <h3>Project 2</h3>
           <p>Time Travel Metaverse project</p>
           <a href="https://shiwangi6587.github.io/project-on-historical-time-travel/">View Project</a>
         </div>
-         <!-- 3RD  -->
+        
          <div class="project-card">
           <img src="port.jpg" alt="Project 1">
           <h3>Project 3</h3>
@@ -162,50 +157,29 @@
         
         
       </div>
-    </section>
+    </section> 
+
+
 
 
      <!-- FIFTH section  -->
-    <!-- forth section -->
-      <section  id="contact" class="hidden">
-      <div class="cont">CONTACT ME</div>
-         <div   class="contact_form" id="contactForm">
-          <div class="left_cont" data-aos="fade-down" data-aos-duration="1000" >
-            <div data-aos="zoom-in-left" data-aos-duration="1500">
-              
-              <form action="" class="cont_box_img" method="post">
-                  <fieldset class="box_frame">
-                      <label  style=" margin-top: 50px; padding-top: 50px; color: rgb(73, 132, 205)  "><h1>STAY IN CONTACT</h1></label>
-                      <!-- name  --> <br>
-                      <label for="name"><b> NAME :</b> </label>
-                      <input type="text" id="name" placeholder="xyz"><br><br>
-                      <!-- mail id  --> <br>
-                      <label for="name"><b> EMAIL ID :</b> </label>
-                      <input type="text" id="Email_id" placeholder="xyz@mail.com"><br><br>
-                      <!-- contact  -->  <br>
-                      <label for="name"><b> CONTACT :</b> </label>
-                      <input type="text" id="contact" placeholder="000000"><br><br>
-                      <!-- query  -->  <br>
-                      <label style="font-size: 1.5rem; display: flex;" type="comment" ><b> Query</b> </label>
-                      <textarea name="comment" id="comment" placeholder="Enter your message....." cols="30" rows="8"></textarea> <br>
-                      <!-- submit  -->
-                      <button style="background-color: rgba(101, 166, 154, 0.627);" data-bs-toggle="tooltip" data-bs-title="Send">Submit</button>
-
-
-                  </fieldset>
-                  <div class="skill_image">
-        <img  src="kol.png" alt="bye">
-      
-
-      </div>
-              </form>
-          </div>
+    <div id="contact" class="cont">CONTACT ME</div>
+     <div class="form-container">
        
-      </div>
-      </div>
-      
-    </section>
+      <!-- <form action="#" method="post"> -->
+        <form action="#" onsubmit="sendemail() ; reset();return false "  >
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
 
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
 
 
     <hr>
@@ -219,43 +193,49 @@
      </div>
   </div>
  </section>
- 
-
-
-
 
 </main>
-
-
-
-
-
-
-
-
 
 
   <!-- animation script (load anim,ation ) -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
      <!-- script tag  -->
-       <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Developer ', 'Graphic Designer','Web Designer','Developer'],
-      typeSpeed: 50,
-    });
-  </script>
+      
+ <script src="https://smtpjs.com/v3/smtp.js"> </script>
+=
+<script>
+ function sendemail(){
+  Email.send({
+    // Host : "smtp.elasticemail.com",
+    host :"smtp.gmail.com",
+    Username : "shiwangii5734@gmail.com",
+    Password : "FF2D4D414A9E7B6D16522A0204E6331371E8",
+   
+    To : 'shiwangii5734@gmail.com',
+    // From : document.getElementById("email").value,
+    From : 'shiwangii5734@gmail.com',
+    Subject : "new contact form Enquirey",
+    Body : "content"+document.getElementById("name").value 
+    + "<br> Email :"+document.getElementById("email").value
+    + "<br> Message :"+document.getElementById("message").value  ,
+    SecureToken : "114d93d6-f16e-4e3f-8259-69fef09910f2",
+    // secure :"true",
+    // port :"2525"
+}).then(
+  // message => alert("message sent sucessfuly ")
+  message => alert("Form submitted")
 
-<!-- for change resolution andview point  -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+);
+ }
 
-<!-- java script  -->
-<script src="script.js"></script>
+</script> 
 
+<!-- <script src="script.js"></script> -->
 
 </body>
 </html>
+
 
 
 
