@@ -130,7 +130,8 @@ border-style: double;
 
    /* for id use '#' */
   #element {
- color: rgb(241, 248, 247);
+ color: rgb(255, 255, 255);
+ text-shadow:0 0 10px rgba(192, 115, 184, 0.726), 0 0 20px rgba(192, 138, 176, 0.767), 0 0 30px rgba(198, 110, 180, 0.658) ;
   }
  /* second section  */
   .second_section{
